@@ -4,7 +4,8 @@ var xml2js = require('xml2js');
 fetch.Promise = require('bluebird');
 
 var applicationId = "amzn1.ask.skill.a7993c5e-718a-4685-ac62-131a66c21163";
-var muniStop = "14947"; // 7
+var muniStop = "14947";
+var routeTag = "7";
 
 exports.handler = function (event, context) {
   try {
@@ -31,7 +32,7 @@ exports.handler = function (event, context) {
 function getData(callback) {
   var parser = new xml2js.Parser();
 
-  fetch('http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=sf-muni&stopId=' + muniStop)
+  fetch('http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=sf-muni&stopId=' + muniStop + '&routeTag=' + routeTag)
   .then(function(res) {
     return res.text();
   })
