@@ -3,9 +3,9 @@ var xml2js = require('xml2js');
 
 fetch.Promise = require('bluebird');
 
-var applicationId = "amzn1.ask.skill.a7993c5e-718a-4685-ac62-131a66c21163";
-var muniStop = "14947";
-var routeTag = "7";
+var applicationId = "amzn1.ask.skill.7f421842-7eb9-47f2-90a7-59feb41f31c0";
+var muniStop = "13911";
+var routeTag = "N";
 
 exports.handler = function (event, context) {
   try {
