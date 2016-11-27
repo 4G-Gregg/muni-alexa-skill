@@ -3,8 +3,8 @@ var xml2js = require('xml2js');
 
 fetch.Promise = require('bluebird');
 
-var applicationId = "<ALEXA SDK APP ID HERE>";
-var muniStop = "<MUNI STOP NUMBER HERE>";
+var applicationId = "amzn1.ask.skill.a7993c5e-718a-4685-ac62-131a66c21163";
+var muniStop = "14947"; // 7
 
 exports.handler = function (event, context) {
   try {

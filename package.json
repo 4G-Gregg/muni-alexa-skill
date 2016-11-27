@@ -1,5 +1,5 @@
 {
-  "name": "MUNI Alexa Skill",
+  "name": "MUNI-Alexa-Skill",
   "version": "1.0.0",
   "description": "Returns next 3 MUNIs for your stop",
   "main": "index.js",
