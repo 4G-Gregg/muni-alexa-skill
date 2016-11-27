@@ -57,6 +57,13 @@ function getData(callback) {
   });
 }
 
+function getFirstWord(str) {
+    if (str.indexOf(' ') === -1)
+        return str;
+    else
+        return str.substr(0, str.indexOf(' '));
+};
+
 function getResponse(request, session, callback) {
   var speechOutput;
 
@@ -65,7 +72,7 @@ function getResponse(request, session, callback) {
       speechOutput = "Error fetching the schedule";
     } else {
       // Construct response text with max 3 arriving MUNIs
-      speechOutput = "Next " + data.route + " " + data.direction + " will arrive in ";
+      speechOutput = "The next " + routeTag + ", " + getFirstWord(data.direction) + ", will arrive in ";
 
       data.predictions = data.predictions.slice(0, 3)
       var predictionCount = data.predictions.length;
