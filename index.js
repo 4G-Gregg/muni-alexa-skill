@@ -69,7 +69,7 @@ function getResponse(request, session, callback) {
 
   getData(function(err, data) {
     if (err) {
-      speechOutput = "Error fetching the schedule";
+      speechOutput = "Hmm... There doesn't seem to be any scheduled.";
     } else {
       // Construct response text with max 3 arriving MUNIs
       speechOutput = "The next " + routeTag + ", " + getFirstWord(data.direction) + ", will arrive in ";
